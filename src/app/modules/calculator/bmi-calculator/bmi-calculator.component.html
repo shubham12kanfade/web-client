@@ -1,0 +1,57 @@
+<section class="BMI-form paddings-y">
+  <hr class="space m">
+  <hr class="space m">
+  <hr class="space m">
+  <form>
+    <div class="headerForm">Body Mass Index (BMI)</div>
+    <div id="info class-info">
+      <div class="titelPart">
+        <div class="part">
+          <span>Age and Gender</span>
+        </div>
+      </div>
+      <input type="text" placeholder="Age" class="inptText" name="age" id="age" required>
+      <div class="btn btnGreen" id="female">Female</div>
+      <div class="btn btnGray" id="male">Male</div>
+      <div class="titlePart">
+        <div class="part">
+          <span>Height</span>
+        </div>
+      </div>
+      <input type="text" placeholder="Height" class="inptText" required name="height" id="height">
+      <div class="btn btnGray" id="inch">Inches</div>
+      <div class="btn btnGreen" id="meters">Centimetres</div>
+      <div class="titlePart">
+        <div class="part">
+          <span>Weight</span>
+        </div>
+      </div>
+      <input type="text" placeholder="Weight" class="inptText" required name="weight" id="weight">
+      <div class="btn btnGray" id="pounds">Pounds</div>
+      <div class="btn btnGreen" id="kg">Kilograms</div>
+      <div class="btnCal" id="calculate">Calculate</div>
+    </div>
+    <div id="result">
+      <div class="titlePart">
+        <div class="part">
+          <span>Result</span>
+        </div>
+      </div>
+      <div class="bmi">
+        <div class="bmiItem thinness"></div>
+        <div class="bmiItem normal"></div>
+        <div class="bmiItem overWeight"></div>
+        <div class="bmiItem obese"></div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="resultTitle">BMI:&nbsp;
+        <span id="bmiResult"></span>
+      </div>
+      <div class="btnCal" id="back">Back</div>
+    </div>
+  </form>
+</section>

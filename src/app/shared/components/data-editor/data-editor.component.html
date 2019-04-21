@@ -1,0 +1,24 @@
+<div class="row items-center align-center">
+    <div class="column content-center align-stretch border box padding">
+      <div class="item align-center">
+        <div class="text-bold padding-bottom">{{title}}</div>
+        <mat-divider></mat-divider>
+        <div class="row margin-top-min">
+          <mat-form-field class="item grow padding-right-min" color="accent">
+            <textarea matInput id="editorData"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="row items-end margin-top">
+          <div class="margin-right">
+            <button mat-raised-button color="accent" class="small-button overlay-button shadow-none" (click)="save()">
+              OK</button>
+          </div>
+          <div>
+            <button mat-button mat-stroked-button class="button-small overlay-button" (click)="cancel()">
+              Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   

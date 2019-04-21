@@ -1,0 +1,153 @@
+.heading-style {
+  font-family: fantasy;
+  font-size: 27px;
+  color: white;
+  padding: 17px 17px;
+
+  >span {
+    color: greenyellow;
+  }
+}
+
+.heading-style1 {
+  font-family: fantasy;
+  font-size: 27px;
+  color: black;
+  padding: 10px 15px;
+
+  >span {
+    color: greenyellow;
+  }
+}
+
+.backdrop {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+}
+
+
+@media only screen and (min-width: 767px) {
+  .popupLogin {
+    left: 30%;
+    position: fixed;
+    top: 10rem;
+    z-index: 999;
+  }
+
+  .collapse navbar-collapse {}
+}
+
+.popupLogin {
+  position: fixed;
+  top: 6rem;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 767px) {
+  .collapse .navbar-collapse {
+    margin-top: -6rem;
+    background: white;
+    z-index: 999;
+    position: absolute;
+  }
+}
+
+.sidenav {
+  height: 100rem;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+
+  >i {
+    font-size: 29px;
+    padding-top: 13px;
+    padding-right: 12px;
+  }
+
+  >span {
+    font-size: 16px;
+    color: white;
+    padding-right: 0px;
+    text-transform: uppercase;
+  }
+
+  // margin-left: 50px;
+}
+
+.mystyle {
+  display: none;
+}
+
+.mystyle-open {
+  display: block;
+}
+
+.togale-btn {
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.username {
+  margin-left: -15rem;
+  /* position: absolute; */
+  padding-right: 8rem;
+  font-family: none;
+
+}
+
+.icons {
+  float: right;
+  padding-top: 15px;
+  padding-right: 10px;
+
+  >.shopping-cart {
+    font-size: 20px;
+    padding-right: 20px;
+  }
+
+  >.login-btn {
+    font-size: 20px;
+    padding-right: 4px;
+
+  }
+
+  >.searchBtn {
+    display: none;
+    font-size: 20px;
+    padding-right: 20px;
+
+  }
+}
+#mySidenav{
+  z-index: 10;
+}
+.d-h{
+  display: none;
+}

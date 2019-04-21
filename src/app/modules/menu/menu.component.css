@@ -1,0 +1,27 @@
+.center-marging {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.left-marg {
+  margin-left: 13px;
+}
+
+.mb-hide {
+  display: none;
+}
+
+.button-addtocart {
+  padding-bottom: 0.5rem;
+  padding-top: 0rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+.m-top {
+  margin-top: 10px;
+}
+
+.container.content, .section-empty>.content, .section-bg-image>.content, .section-bg-video>.content, .section-bg-animation>.content, .section-slider>.content, .section-bg-color>.content, .section-item>.content, .section-two-blocks .content{
+  padding-top: 30px !important;
+}

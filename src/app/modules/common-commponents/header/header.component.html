@@ -1,0 +1,144 @@
+<header class="fixed-top bg-transparent menu-transparent scroll-change wide-area" data-menu-anima="fade-in">
+  <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-main">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="togale-btn nave-hide-show-mob">
+            <i onclick="openNav()" id="click" class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" routerLink="/">
+            <img class="logo-default scroll-hide" src="../../../assets/newUpdates/whitelogo.png" alt="logo" />
+            <img class="logo-default scroll-show" src="../../../assets/newUpdates/logo1.jpg" alt="logo" />
+          </a>
+          <span class="icons d-h">
+            <button type="button" *ngIf="!name" class="btn btn-default shopping-cart">
+              <span class="fa fa-search"></span>
+            </button>
+            <button type="button" *ngIf="!name" class="btn btn-default shopping-cart">
+              <span class="fa fa-cart-plus"></span>
+            </button>
+            <button type="button" (click)="onLogin()" *ngIf="!name" class="btn btn-default login-btn">
+              <span class="fa fa-user-circle-o"></span>
+            </button>
+          </span>
+        </div>
+        <div class="collapse navbar-collapse nave-hide-show">
+          <ul class="nav navbar-nav">
+            <li class="dropdown " routerLinkActive="active">
+              <a routerLink='/'>Home <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a routerLink='/about'>About Us <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a routerLink='/menu'>Menu <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a routerLink="/blog">Blog <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" routerLink="/bmi">Calculators <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu multi-level">
+                <li routerLinkActive="active">
+                  <a routerLink="/bmi">BMI Calculator</a>
+                </li>
+                <li routerLinkActive="active">
+                  <a routerLink="/bmi/fc">Fat Calculator</a>
+                </li>
+
+                <li routerLinkActive="active">
+                  <a routerLink="/bmi/cc">Calorie Calculator</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a routerLink="/gallary">Gallery <span class="caret"></span></a>
+            </li>
+          </ul>
+          <div class="nav navbar-nav navbar-right">
+            <div class="shop-menu-cnt">
+              <!-- <span class="cart-count">1</span> -->
+              <i class="fa fa-cart-plus"></i>
+              <div class="shop-menu">
+                <ul class="shop-cart">
+                  <li class="cart-item">
+                    <img src="../../../assets/images/gallery/pizza-1.jpg" alt="">
+                    <div class="cart-content">
+                      <h5>Wood Airplain</h5>
+                      <span class="cart-quantity">
+                        1 x 299.00$
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <p class="cart-total">
+                  Subtotal: <span>$299.00</span>
+                </p>
+                <p class="cart-buttons">
+                  <a href="#" class="btn btn-xs cart-view">View Cart</a>
+                  <a href="#" class="btn btn-xs cart-checkout">Checkout</a>
+                </p>
+              </div>
+            </div>
+            <div class="search-box-menu">
+              <div class="search-box scrolldown">
+                <input type="text" class="form-control" placeholder="Search for...">
+              </div>
+              <button type="button" class="btn btn-default btn-search">
+                <span class="fa fa-search"></span>
+              </button>
+            </div>
+            <div class="search-box-menu">
+              <button type="button" (click)="onLogin()" *ngIf="!name" class="btn btn-default btn-search">
+                <span class="fa fa-user-circle-o"></span>
+              </button>
+              <button type="button" *ngIf="name" class="btn btn-default btn-search">
+                <span>{{name}}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-big sidenav nave-hide-show-mob" id="mySidenav">
+          <div class="closebtn username"><i class="fa fa-user-circle"></i><span>User Name</span></div>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" onclick="closeNav()" routerLinkActive="active">
+              <a routerLink="/">Home <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" onclick="closeNav()" routerLinkActive="active">
+              <a routerLink='/about'>About Us <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" onclick="closeNav()" routerLinkActive="active">
+              <a routerLink='/menu'>Menu <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" onclick="closeNav()" routerLinkActive="active">
+              <a routerLink="/blog">Blog <span class="caret"></span></a>
+            </li>
+            <li class="dropdown" routerLinkActive="active">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Calculators <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu multi-level">
+                <li routerLinkActive="active" onclick="closeNav()">
+                  <a routerLink="/bmi">BMI Calculator</a>
+                </li>
+                <li routerLinkActive="active" onclick="closeNav()">
+                  <a routerLink="/fc">Fat Calculator</a>
+                </li>
+
+                <li routerLinkActive="active" onclick="closeNav()">
+                  <a routerLink="/cc">Calorie Calculator</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown" routerLinkActive="active" onclick="closeNav()">
+              <a routerLink="/gallary">Gallery <span class="caret"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<app-login (close)="closeModel()" *ngIf="closeIt" class="popupLogin"></app-login>

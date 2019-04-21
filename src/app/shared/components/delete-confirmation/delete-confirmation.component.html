@@ -1,0 +1,24 @@
+<div class="row items-center height-90 align-center">
+  <div class="column content-center align-stretch border box padding">
+    <div class="item align-center">
+      <div class="text-bold margin-bottom-min">{{title}}</div>
+      <mat-divider></mat-divider>
+      <div class="row margin-top margin-bottom align-center">
+        <div class="col-3 item">
+          <i class="material-icons large-alert-icon">delete</i>
+        </div>
+        <div class="col-8 item">
+          Are you sure you want to delete ?
+        </div>
+      </div>
+      <div class="row items-end margin-top">
+        <div class="margin-right">
+          <button mat-button mat-stroked-button class="overlay-button" (click)="cancel()">CANCEL</button>
+        </div>
+        <div>
+          <button color="accent" mat-raised-button class="shadow-none large-alert-button overlay-button" (click)="delete()">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

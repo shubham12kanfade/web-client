@@ -1,0 +1,218 @@
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+.BMI-form body {
+  background-color: black;
+
+}
+
+.BMI-form header {
+  margin-top: 1rem
+}
+
+.BMI-form form {
+  margin: auto;
+  width: 40rem;
+  height: 40rem;
+  background-color: #F5F5F5;
+  text-align: left;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 14px;
+  color: #626262;
+  position: relative;
+  margin-top: 1rem
+}
+
+.BMI-form .headerForm {
+  background-color: #4ebd4a;
+  border-top: 1px solid #A7D065;
+  padding: 15px 20px;
+  color: #fff;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-weight: 300;
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+  width: 56rem;
+}
+
+.BMI-form .titlePart {
+  margin-bottom: 1.5rem
+}
+
+.BMI-form .part {
+  margin: 1.5rem;
+  border-top: 1px solid #3c9b39;
+  height: 0;
+  text-align: center
+}
+
+.BMI-form .part span {
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding: 0 1rem;
+  background-color: #F5F5F5;
+  color: #4ebd4a;
+  top: -10px
+}
+
+.BMI-form .inptText {
+  width: 60%;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  outline: 0;
+  font-weight: 400;
+  padding: 5px;
+  margin-left: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
+.BMI-form .btn {
+  color: white;
+  width: 5.2em;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  line-height: 2rem;
+  margin-bottom: 1rem
+}
+
+.BMI-form .btnGreen {
+  background-color: #3c9b39
+}
+
+.BMI-form .btnGray {
+  background-color: #b2b1b1
+}
+
+.BMI-form .btnCal {
+  color: white;
+  width: 4rem;
+  background-color: #3c9b39;
+  outline: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem
+}
+
+.BMI-form .btnCal:hover {
+  background-color: #4ebd4a
+}
+
+.BMI-form .resultTitle {
+  margin: 2rem;
+  color: #4ebd4a
+}
+
+.BMI-form #result {
+  display: none
+}
+
+#result.show,
+.BMI-form #info.show {
+  display: block
+}
+
+#result.hide,
+.BMI-form #info.hide {
+  display: none
+}
+
+.BMI-form .bmi {
+  height: 200px;
+  display: flex;
+  justify-content: space-around
+}
+
+.BMI-form .bmiItem {
+  height: 200px;
+  width: 74px
+}
+
+.BMI-form .thinness {
+  background-image: url(../../../../assets/bmi/bmi.png);
+  background-repeat: no-repeat;
+  background-position: 0 -12px
+}
+
+.BMI-form .thinness.active {
+  background-position: 2px -217px
+}
+
+.BMI-form .normal {
+  background-image: url(../../../../assets/bmi/bmi.png);
+  background-repeat: no-repeat;
+  background-position: -83px -12px
+}
+
+.BMI-form .normal.active {
+  background-position: -83px -217px
+}
+
+.BMI-form .overWeight {
+  background-image: url(../../../../assets/bmi/bmi.png);
+  background-repeat: no-repeat;
+  background-position: -169px -12px
+}
+
+.BMI-form .overWeight.active {
+  background-position: -167px -217px
+}
+
+.BMI-form .obese {
+  background-image: url(../../../../assets/bmi/bmi.png);
+  background-repeat: no-repeat;
+  background-position: -246px -12px
+}
+
+.BMI-form .obese.active {
+  background-position: -246px -217px
+}
+
+@media screen and (max-width :40em) {
+
+  .BMI-form .btn,
+  .BMI-form .inptText {
+    line-height: 3rem
+  }
+}
+
+.class-info {
+  /* width: 40rem; */
+  width: 56rem;
+
+}

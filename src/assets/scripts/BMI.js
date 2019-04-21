@@ -1,0 +1,24 @@
+"use strict";const BMI={table:{male:[[15.74164,16.57503,17.55719],[15.275,16.015,16.85],[14.92,15.64,16.45],[14.7,15.42,16.294],[14.61,15.38,16.355],[14.655,15.50,16.615],[14.82,15.77,17.03],[15.09,16.15,17.57],[15.45,16.62,18.20],[15.9,17.18,18.92],[16.42,17.79,19.65],[17.0,18.44,20.41],[17.6,19.1,21.18],[18.24,19.82,21.95],[18.89,20.52,22.7],[19.53,21.21,23.415],[20.14,21.87,24.11],[20.69,22.48,24.78],[21.16744563,23.02029424,25.4235294],],female:[[15.52807587,15.52807587,17.42745659],[14.94,15.72,16.63],[14.57,15.31,16.21],[14.385,15.153,16.135],[14.363,15.21,16.315],[14.48,15.44,16.71],[14.715,15.81,17.27],[15.06,16.29,17.93],[15.48,16.84,18.65],[15.97,17.44,19.43],[16.5,18.08,20.21],[17.05,18.71,20.97],[17.61,19.33,21.33],[18.15,19.91,22.31],[18.65,20.44,22.88],[19.09,20.89,23.38],[19.44,21.26,23.8],[19.69,21.54,24.15],[19.80017572,21.71699934,24.44009565],]},ftInchToCM(ft,inch){return(ft*30.48+inch*2.54)},poundToKG(pound){return(pound*0.453592)},getFromBMIChart(BMI,gender,age){if(age<=20){return this.getBMICategoryUndertwenty(BMI,gender,age)}
+else{return this.getBMICategory(BMI)}},getBMICategory(BMI){if(BMI<18.5)
+return"Thinness";else if(BMI>=18.5&&BMI<25)
+return"Normal";else if(BMI>=25&&BMI<30)
+return"Overweight";else if(BMI>=30)
+return"Obese"},getBMICategoryUndertwenty(BMI,gender,age){let content;if(gender==='male')
+content=this.table.male;if(gender==='female')
+content=this.table.female;if(age<=2)
+age=2;if(BMI<content[age-2][0])
+return"Thinness";else if(BMI>=content[age-2][0]&&BMI<content[age-2][1])
+return"Normal";else if(BMI>=content[age-2][1]&&BMI<content[age-2][2])
+return"Overweight";else if(BMI>=content[age-2][2])
+return"Obese";else return"nan"},getBMI(height,weight,gender,age){const BMI=(weight/Math.pow((height/100),2));return{BMI:Math.round(BMI*10000)/10000,category:this.getFromBMIChart(BMI,gender,age)}},calculateBMI(height,weight,gender,age,options){let h=height;let w=weight;if(options){if(options.feet){h=this.ftInchToCM(0,height)}
+if(options.pound){w=this.poundToKG(weight)}}
+return this.getBMI(h,w,gender,age)}}
+window.onload=function(){var info=document.getElementById("info"),result=document.getElementById("result"),calculate=document.getElementById("calculate"),thinness=document.getElementsByClassName("thinness")[0],normal=document.getElementsByClassName("normal")[0],overWeight=document.getElementsByClassName("overWeight")[0],obese=document.getElementsByClassName("obese")[0],back=document.getElementById("back"),female=document.getElementById("female"),male=document.getElementById("male"),inch=document.getElementById("inch"),meters=document.getElementById("meters"),pounds=document.getElementById("pounds"),kg=document.getElementById("kg"),pound=!1,feet=!1,age,gender="female",height,weight,options=null;female.onclick=function(){female.classList.add("btnGreen");female.classList.remove("btnGray");male.classList.remove("btnGreen");male.classList.add("btnGray");gender="female"}
+male.onclick=function(){male.classList.add("btnGreen");male.classList.remove("btnGray");female.classList.remove("btnGreen");female.classList.add("btnGray");gender="male"}
+inch.onclick=function(){inch.classList.add("btnGreen");inch.classList.remove("btnGray");meters.classList.remove("btnGreen");meters.classList.add("btnGray");feet=!0}
+meters.onclick=function(){meters.classList.add("btnGreen");meters.classList.remove("btnGray");inch.classList.remove("btnGreen");inch.classList.add("btnGray");feet=!1}
+pounds.onclick=function(){pounds.classList.add("btnGreen");pounds.classList.remove("btnGray");kg.classList.remove("btnGreen");kg.classList.add("btnGray");pound=!0}
+kg.onclick=function(){kg.classList.add("btnGreen");kg.classList.remove("btnGray");pounds.classList.remove("btnGreen");pounds.classList.add("btnGray");pound=!1}
+calculate.onclick=function(){age=document.getElementById("age").value;height=document.getElementById("height").value;weight=document.getElementById("weight").value;var options={feet:feet,pound:pound};if(age&&height&&weight){var bmi=BMI.calculateBMI(+height,+weight,gender,+age,options);result.classList.add("show");info.classList.add("hide");result.classList.remove("hide");info.classList.remove("show");document.getElementById("bmiResult").innerText=bmi.BMI;var category=bmi.category;if(category=="Thinness"){removeActiveClass();thinness.classList.add("active")}else if(category=="Normal"){removeActiveClass();normal.classList.add("active")}else if(category=="Overweight"){removeActiveClass();overWeight.classList.add("active")}else{removeActiveClass();obese.classList.add("active")}}}
+function removeActiveClass(params){obese.classList.remove("active");thinness.classList.remove("active");normal.classList.remove("active");overWeight.classList.remove("active")}
+back.onclick=function(){info.classList.add("show");result.classList.add("hide");info.classList.remove("hide");result.classList.remove("show")}}

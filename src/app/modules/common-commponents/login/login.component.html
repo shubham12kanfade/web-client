@@ -1,0 +1,30 @@
+  <div class="classForm">
+    <div id="login-box">
+      <div class="left-box" [formGroup]="RegForm" *ngIf="reg">
+        <h1> Sign Up</h1>
+        <input type="text" formControlName="mobileNumber" placeholder="Mobile Number" />
+        <input type="email" formControlName="email" placeholder="Email Id" />
+        <input type="text" formControlName="firstName" placeholder="First Name" />
+        <input type="text" formControlName="lastName" placeholder="Last Name" />
+        <input type="password" formControlName="password" placeholder="Password" />
+        <input type="submit" (click)="signUp()" name="signup-button" value="Sign Up" />
+      </div>
+      <div class="left-box" [formGroup]="LoginForm" *ngIf="loginCheck">
+        <h1> Sign In</h1>
+        <input type="text" formControlName="mobileNumber" placeholder="Mobile Number" />
+        <input type="email" formControlName="email" placeholder="Email Id" />
+        <input type="password" formControlName="password" placeholder="Password" />
+        <input type="text" formControlName="otp" placeholder="Enter Your Otp" />
+        <input type="submit" (click)="login()" name="signup-button" value="Sign In" /><br>
+        <span (click)="signUpFunction()" class="cursor">Create new Account</span>
+      </div>
+      <div class="right-box hidden-xs">
+        <span class="signinwith">Sign in with<br />Social Network </span>
+        <button class="social facebook">Log in with Facebook</button>
+        <button class="social twitter">Log in with Twitter</button>
+        <button class="social google">Log in with Google+</button>
+      </div>
+      <div class="or  hidden-xs">OR</div>
+    </div>
+    <i (click)="closeModel()" class="fa fa-times close"></i>
+  </div>
